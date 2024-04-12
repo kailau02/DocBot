@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocBot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="chat-banner">
+        <span class="chat-banner-text">Chat with <b id="bot-name"></b></span>
+        <input class="new-chat" type="button" value="New Chat" onclick="newChat()">
+        </div>
+
+        <div id="conversation"></div>
+        <div class="form">
+            <div class="prompt-form">
+                <label for="botNameField">Input:</label>
+                <input type="text" name="input-prompt" id="input-prompt" placeholder="Prompt bot here..." required>
+                <input id="send-btn" class="button" style="width: 100px; height: 40px;" type="button" value="Send" onclick="submitPrompt()">
+                <div id="send-spinner" class="lds-dual-ring" style="display: none;"></div>
+            </div>
+            <p id="error-text" style="color: red; margin: 20px 30px;"></p>
+
+        </div>
+    <script src="chat.js"></script>
+</body>
+</html>

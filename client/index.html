@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocBot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">Welcome to DocBot!</div>
+
+    <div class="content">
+        <p>Having to read text-heavy documents can be exhausting.</p>
+        <p>Our AI will read your document for you so that you don't have to.</p>
+        <p><b>Get started</b> by uploading a PDF document of your chosing!</p>
+    
+        <div class="form">
+            <div class="form-content">
+                <div style="display: flex; gap: 15px;">
+                    <label for="botNameField">Bot Name:</label>
+                    <input type="text" name="botNameField" id="botNameField" style="flex-grow: 1;" placeholder="E.g. DocBot" required>
+                </div>
+                <input id="inputFile" name="inputFile" type="file" accept="application/pdf" onchange="convertToBase64()" required>
+                <input id="start-btn" type="button" style="height: 50px;" value="Start Chatting!" class="button" onclick="submitPDF(event)">
+                <div id="start-spinner" style="margin: auto; display: none;">
+                    <div class="lds-dual-ring"></div>
+                </div>
+            </div>
+            <p id="error-text" style="color: red;"></p>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

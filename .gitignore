@@ -1,0 +1,8 @@
+.env
+.vscode
+server/__pycache__
+server/.ipynb_checkpoints
+server/dev/.ipynb_checkpoints
+server/venv
+server/dev/chroma_db/**
+server/dev/docs/*
